@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Zoom</title>
+    <style>
+        .zoom-container{
+            overflow: hidden;
+        }
+        .zoom-image{
+           
+            transition: transform 0.5s ease-in;
+        }
+        .zoom-container:hover .zoom-image{
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="zoom-container">
+        <img src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg" alt="" class="zoom-image">
+    </div>
+</body>
+</html>
