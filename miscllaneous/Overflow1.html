@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .gallery{
+            width: 900px;
+            height: 300px;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 300px; /* Ensures all images are the same height */
+            object-fit: cover;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1576158114254-3ba81558b87d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt="Image 1">
+        <img src="https://images.unsplash.com/photo-1576158113928-4c240eaaf360?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt="Image 2">
+        <img src="https://images.unsplash.com/photo-1579818276426-2f2bca600658?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt="Image 3">
+    </div>
+</body>
+</html>
+
+
+<!-- overflow: hidden;: This property hides any content that exceeds the dimensions of the container, ensuring a clean and tidy layout.
+Use Case: Perfect for image galleries or any UI element where you want to maintain strict control over layout and prevent overflow content from being visible. -->

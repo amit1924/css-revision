@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            text-align: center;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+        }
+        
+        .box {
+            width: 300px;
+            margin: 20px; /* Margin: space outside the border */
+            padding: 20px; /* Padding: space inside the border */
+            border: 10px solid #333; /* Border: line around the padding */
+            background-color: #fff; /* Content: area inside the padding */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Box Model Demonstration</h1>
+        <div class="box">
+            <p>This box demonstrates all properties of the box model: margin, border, padding, and content.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+<!--
+ +----------------------------+  <- Margin (20px)
+|                            |
+|  +----------------------+  |  <- Border (10px)
+|  |                      |  |
+|  |  +----------------+  |  |  <- Padding (20px)
+|  |  |                |  |  |
+|  |  |   Content      |  |  |  <- Content (300px wide)
+|  |  |                |  |  |
+|  |  +----------------+  |  |
+|  |                      |  |
+|  +----------------------+  |
+|                            |
++----------------------------+
+ -->

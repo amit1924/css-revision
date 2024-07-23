@@ -1,0 +1,1 @@
+The min-height CSS property sets the minimum height of an element. It ensures that the element is at least as tall as the value specified, but it can grow taller if its content requires more space.

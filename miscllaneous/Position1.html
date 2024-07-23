@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Properties</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .navbar {
+        background-color: #333;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .static-section,
+.relative-section,
+.absolute-section,
+.fixed-section,
+.sticky-section {
+    padding: 50px 20px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+}
+
+.relative-section {
+    background-color: #f9f9f9;
+}
+
+.relative-box{
+    position: relative;
+    top: 10px;
+    left: 20px;
+    background-color: #ffcc00;
+    padding: 10px;
+}
+
+.absolute-section {
+    background-color: #e9e9e9;
+    position: relative; /* To contain the absolute box */
+}
+.absolute-container{
+    position: relative;
+    height: 200px;
+    background-color: #d9d9d9;
+}
+.absolute-box {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background-color: #ff6600;
+    padding: 10px;
+}
+
+.fixed-section {
+    background-color: #f0f0f0;
+}
+
+.fixed-box {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background-color: #ff0033;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.sticky-section {
+    background-color: #e0e0e0;
+}
+
+.sticky-box {
+    position: sticky;
+    top: 0;
+    background-color: #00cc99;
+    padding: 10px;
+    z-index: 100;
+}
+
+  </style>
+</head>
+<body>
+    <header class="navbar">
+        <h1>Position Properties </h1>
+    </header>
+
+    <main>
+        <section class="static-section">
+            <h2>Static Position</h2>
+            <p>This element is positioned statically by default.</p>
+        </section>
+        <section class="relative-section">
+            <h2>Relative Position</h2>
+            <p>This element is positioned relative to its normal position.</p>
+            <div class="relative-box">I am relative</div>
+        </section>
+        <section class="absolute-section">
+            <h2>Absolute Position</h2>
+            <p>This element is positioned absolutely within its containing element.</p>
+            <div class="absolute-container">
+                <div class="absolute-box">I am absolute</div>
+            </div>
+        </section>
+        <section class="fixed-section">
+            <h2>Fixed Position</h2>
+            <p>This element is fixed and will always stay in the same position.</p>
+            <div class="fixed-box">I am fixed</div>
+        </section>
+        <section class="sticky-section">
+            <h2>Sticky Position</h2>
+            <p>This element is sticky and will stick to the top of the viewport when you scroll past it.</p>
+            <div class="sticky-box">I am sticky</div>
+        </section>
+    </main>
+</body>
+</html>
+
+<!-- 
+position: static: Used by default, does not affect the normal flow.
+
+position: relative: Allows for adjustments without removing the element from the document flow.
+
+position: absolute: Useful for precise positioning within a containing element.
+
+position: fixed: Ideal for elements that need to remain visible during scrolling, such as a sticky header
+.
+position: sticky: Combines the behavior of relative and fixed positioning, useful for elements that should stick to the viewport during scrolling but only within a certain container.
+
+
+
+
+ -->

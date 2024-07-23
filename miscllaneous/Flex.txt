@@ -1,0 +1,1 @@
+The flex: 1 shorthand in CSS is a powerful tool when working with flexbox layouts. It allows a flex item to grow and fill the available space within its container. 

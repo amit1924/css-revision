@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Tag</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+        }
+        
+        .controls {
+            margin-top: 20px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            border: none;
+            background-color: #4caf50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <audio  id="audio" controls>
+            <source src="O Mahi.mp3" type="audio/mpeg">
+            <source src="piya aaye na.mp3" type="audio/ogg">
+            Your browser does not support the audio tag.
+        </audio>
+        <div class="controls">
+            <button onclick="playAudio()">Play</button>
+            <button onclick="pauseAudio()">Pause</button>
+            <button onclick="stopAudio()">Stop</button>
+        </div>
+
+    </div>
+    <script>
+const audio=document.getElementById("audio");
+
+const playAudio =()=>{
+    audio.play()
+}
+
+const pauseAudio =()=>{
+    audio.pause()
+}
+
+const stopAudio =()=>{
+    audio.pause()
+    audio.currentTime=0
+}
+    </script>
+</body>
+</html>
+
+
+<!-- 
+
+autoplay:
+
+Automatically starts playing the audio when the page loads.
+html
+
+<audio id="audio" controls autoplay>
+loop:
+
+Makes the audio loop back to the start when it finishes playing.
+html
+
+<audio id="audio" controls loop>
+muted:
+
+Mutes the audio by default.
+html
+
+<audio id="audio" controls muted> -->

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block, Inline, and Inline-Block Elements</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .profile-card{
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+
+        /* Block Elements */
+        .profile-name{
+            margin: 20px 0 10px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .profile-description {
+            font-size: 14px;
+            color: #416614;
+        }
+
+         /* Inline Elements */
+
+         .stat{
+            display: inline;
+            margin: 5px;
+            font-size: 14px;
+            color:#510b0b
+         }
+
+         /* Inline-Block Elements */
+         .profile-stats{
+            margin: 20px 0;
+         }
+
+         .profile-actions{
+            margin-top: 20px;
+         }
+         .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 14px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <img src="https://www.florin-pop.com/static/580a39549812457188f2acf1b8459d3f/47cd0/profile-card-design.png" alt="Profile Image" class="profile-image" width="320" height="220">
+        <h2 class="profile-name">John Doe</h2>
+        <p class="profile-description">A passionate web developer with skills in HTML, CSS, and JavaScript.</p>
+        <div class="profile-stats">
+            <span class="stat"><strong>Posts:</strong> 120</span>
+            <span class="stat"><strong>Followers:</strong> 300</span>
+            <span class="stat"><strong>Following:</strong> 180</span>
+        </div>
+        <div class="profile-actions">
+            <button class="btn">Follow</button>
+            <button class="btn">Message</button>
+        </div>
+    </div>
+</body>
+</html>

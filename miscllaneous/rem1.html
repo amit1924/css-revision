@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Card Grid</title>
+   <style>
+    :root{
+        font-size: 16px;
+    }
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .card-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+        gap:2rem;
+        padding: 2rem;
+    }
+    .card{
+       text-align: center;
+        background-color: rgb(61, 26, 94);
+        padding: 2rem;
+        border-radius: .5rem;
+        box-shadow: 0 0.5rem 1rem rgba(226, 12, 12, 0.1);
+    }
+    .card h2 {
+        margin-top: 0;
+        font-size: 1.5rem;
+    }
+    
+    .card p {
+        font-size: 1rem;
+    }
+   </style>
+</head>
+<body>
+    <div class="card-grid">
+        <div class="card">
+            <h2>Card 1</h2>
+            <p>This is a responsive card using rem units.</p>
+        </div>
+        <div class="card">
+            <h2>Card 2</h2>
+            <p>This is a responsive card using rem units.</p>
+        </div>
+        <div class="card">
+            <h2>Card 3</h2>
+            <p>This is a responsive card using rem units.</p>
+        </div>
+        <div class="card">
+            <h2>Card 4</h2>
+            <p>This is a responsive card using rem units.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!-- Root Font Size: The :root element sets the base font size to 16px, which is the default for most browsers.
+Card Grid: The .card-grid uses rem units for padding and gap between cards. This ensures that spacing scales proportionally if the root font size changes.
+Cards: Each .card uses rem units for padding, border-radius, and font sizes, making the layout more flexible and responsive. -->
+
+<!-- grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));:
+auto-fit: This tells the grid to create as many columns as will fit into the container without overflowing. If there's extra space, the columns will expand to fill it.
+minmax(15rem, 1fr): Each column will be at least 15rem wide but can grow to fill the available space. -->

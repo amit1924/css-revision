@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Header Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header{
+            position: sticky;
+            top: 0;
+            background-color: rgb(47, 18, 74);
+            color: rgb(70, 70, 13);
+            padding: 10px 0;
+            z-index: 10;
+        }
+        .header nav ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header nav ul li{
+            margin: 0 15px;
+            
+        }
+
+        .header nav ul li a{
+            text-decoration: none;
+            color: yellowgreen;
+            padding: 10px 15px;
+        }
+
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            background-color: #f9f9;
+            box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index:2
+        }
+        .dropdown-content li {
+            padding: 8px 16px;
+        }
+        .dropdown-content li a {
+            color: rgb(0, 0, 0);
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Menu</a>
+            <ul class="dropdown-content">
+              <li><a href="#">Item 1</a></li>
+              <li><a href="#">Item 2</a></li>
+              <li><a href="#">Item 3</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="content">
+      <h1>Welcome to My Website</h1>
+      <p>This is the main content of the website.</p>
+    </div>
+  </body>
+</html>
+
+
+<!-- Header (z-index: 10): Ensures the header stays above the main content as the user scrolls down.
+Dropdown Content (z-index: 20): Ensures the dropdown menu appears above the header and other content when hovered over. -->

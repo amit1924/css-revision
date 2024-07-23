@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Elements</title>
+    <style>
+        article{
+            text-align: center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        
+        header, section, footer {
+            margin-bottom: 20px;
+        }
+        
+        header h1, section h2, footer p {
+            margin: 0;
+            padding: 10px 0;
+        }
+        
+        section {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+        
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        p {
+            margin: 10px 0;
+        }
+        
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        strong {
+            font-weight: bold;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        img {
+            display: block;
+            margin: 10px 0;
+            max-width: 100%;
+        }
+        
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        
+        .content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+        
+        .highlight {
+            background-color: yellow;
+        }
+        .inline-elements{
+         text-align: center;
+        }
+        
+        .inline-elements img{
+         text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Block Elements</h1>
+    </header>
+    <section>
+        <article>
+            <h2>Article Title</h2>
+            <p>This is a paragraph inside an article section.</p>
+        </article>
+    </section>
+    <footer>
+        <p>&copy; 2024 My Website</p>
+    </footer>
+    <hr><hr>
+<div class="inline-elements">
+    <h1>Inline Elements</h1>
+    <p>This is a paragraph with <a href="#">a link</a>, <strong>bold text</strong>, and <em>italic text</em>.</p>
+    <p>Here is an image: <img src="https://via.placeholder.com/150" alt="Placeholder Image"></p>
+    <p>Use the <code>&lt;code&gt;</code> element to display inline code.</p>
+
+</div>
+    <hr><hr>
+
+
+
+   
+
+    <div class="content">
+        <h1>Combining Block and Inline Elements</h1>
+        <p>This is a block-level <strong>paragraph</strong> that contains inline elements like <a href="#">links</a> and <em>emphasized text</em>.</p>
+        <p>You can also include images: <img src="https://via.placeholder.com/150" alt="Placeholder Image"></p>
+        <p>Here is some <span class="highlight">highlighted text</span> using a <code>&lt;span&gt;</code> element.</p>
+    </div>
+</body>
+</html>

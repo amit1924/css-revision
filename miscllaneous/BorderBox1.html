@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-Sizing Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .box {
+            margin: 20px 0;
+            padding: 20px;
+            border: 10px solid #333;
+            background-color: #fff;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .content-box {
+            box-sizing: content-box; /* Default */
+        }
+        .border-box {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Box-Sizing: Content-Box vs. Border-Box</h1>
+        <div class="box content-box">
+            <h2>Content-Box (Default)</h2>
+            <p>This box uses the default box-sizing property (content-box). The width and height include only the content, not the padding or border.</p>
+        </div>
+        <div class="box border-box">
+            <h2>Border-Box</h2>
+            <p>This box uses box-sizing: border-box. The width and height include the content, padding, and border.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!-- Content-Box: The width and height only include the content. Padding and border are added outside, making the box larger overall.
+
+Border-Box: The width and height include the content, padding, and border. This makes the box-sizing more intuitive as the total size of the element remains consistent. -->
+
+<!-- Resize the Browser Window: Notice how both boxes adjust, but the border-box box maintains the same overall width by including the padding and border in the total width. -->

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin Auto 2</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #471515;
+        }
+        .container{
+            width: 100%;
+            max-width: 450px;
+            background-color: rgb(44, 18, 69);
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin: auto;
+        }
+
+        .login-form{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-form h2{
+            text-align: center;
+        }
+
+        .login-form label{
+            margin-top: 10px;
+        }
+
+        .login-form input{
+            margin-top: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-form button {
+            margin: 20px 0;
+            padding: 10px;
+            border: none;
+            background-color: #4caf50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form class="login-form">
+            <h2>Login</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>

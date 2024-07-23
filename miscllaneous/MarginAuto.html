@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centering a Box</title>
+    <style>
+        /* style.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #b11212;
+}
+
+.container {
+    width: 80%;
+    background-color: #0c1ba5;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #4caf50;
+    margin: auto; /* This centers the box horizontally */
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

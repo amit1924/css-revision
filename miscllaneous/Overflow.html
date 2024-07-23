@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Scrollable Content Box</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        
+        .content-box {
+            width: 300px;
+            height: 200px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            overflow: auto; /* Enables scrolling when content overflows */
+        }
+        
+        .content-box h2 {
+            margin-top: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="content-box">
+        <h2> Scrollable Content Box</h2>
+
+        <p>This is a scrollable content box. You can add a lot of content here, and it will become scrollable if it exceeds the box's height.</p>
+        <p>Content line 1</p>
+        <p>Content line 2</p>
+        <p>Content line 3</p>
+        <p>Content line 4</p>
+        <p>Content line 5</p>
+        <p>Content line 6</p>
+        <p>Content line 7</p>
+        <p>Content line 8</p>
+        <p>Content line 9</p>
+        <p>Content line 10</p>
+    </div>
+</body>
+</html>
+
+
+<!-- overflow: auto;: This property allows the box to scroll vertically or horizontally if the content exceeds its dimensions.
+Use Case: Ideal for areas where content length is unpredictable, such as comments sections or chat boxes. -->

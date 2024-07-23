@@ -1,0 +1,1 @@
+margin: auto is a CSS property used to center an element horizontally within its container. When applied to an element with a specified width, it automatically calculates and distributes the left and right margins equally, thus centering the element.

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Card Layout</title>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f0f0f0;
+    }
+    
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+        max-width: 1000px;
+    }
+    
+    .card {
+        flex: 1 1 calc(33.333% - 40px); /* Adjust card width and account for gap */
+        background-color: white;
+        padding: 20px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    
+    .card h2 {
+        margin-top: 0;
+    }
+    
+    .card p {
+        margin: 0;
+    }
+    
+    @media (max-width: 768px) {
+        .card {
+            flex: 1 1 calc(50% - 40px);
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .card {
+            flex: 1 1 100%;
+        }
+    }
+    
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>Card 1</h2>
+            <p>This is the first card. It has padding and a border.</p>
+        </div>
+        <div class="card">
+            <h2>Card 2</h2>
+            <p>This is the second card. It also has padding and a border.</p>
+        </div>
+        <div class="card">
+            <h2>Card 3</h2>
+            <p>This is the third card. It too has padding and a border.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!-- Global box-sizing: We set box-sizing: border-box; on all elements (*). This ensures padding and borders are included within the specified width and height of each element, making it easier to manage layout without having to account for these additional dimensions.
+Card Layout:
+Container: The container uses flexbox to arrange the cards. flex-wrap: wrap; allows the cards to wrap to the next line if they don't fit in one row.
+Card: Each card is designed to be responsive, adjusting its size based on the screen width. The calc(33.333% - 40px) accounts for the card's desired width minus the gap between cards.
+Media Queries: The layout adjusts for different screen sizes, ensuring the cards are responsive. For screens less than 768px wide, cards take up 50% of the width. For screens less than 480px wide, cards take up 100% of the width. -->
+
+<!-- Padding and Borders Not Included in Width: Without box-sizing: border-box;, the padding and border are added to the element's width and height. This means the actual size of each card is larger than specified. -->
+
+
+<!-- Overflow and Layout Issues: Because the padding and border increase the size of the card, the cards may not fit properly within the container. This can cause overflow issues, where the cards wrap unexpectedly or extend beyond the container's width. -->

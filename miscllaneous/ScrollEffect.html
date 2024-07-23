@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Effect Example</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            border-top: 1px solid #ccc;
+        }
+
+        button {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: #a51313;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .scroll-down {
+            bottom: 10px;
+        }
+
+        .scroll-up {
+            top: 10px;
+            bottom: auto;
+            display: none;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Scrolling Page</h1>
+        <button class="scroll-down" id="scroll-down">&#8595;</button>
+        <section id="section1" class="section">
+            <h2>Section 1</h2>
+        </section>
+        <section id="section2" class="section">
+            <h2>Section 2</h2>
+        </section>
+        <button class="scroll-up" id="scroll-up">&#8593;</button>
+    </header>
+
+    <script>
+        const scrollDown=document.getElementById("scroll-down");
+
+        const scrollUp=document.getElementById("scroll-up");
+
+        scrollDown.addEventListener('click',()=>{
+            window.scrollBy({
+                top:window.innerHeight,
+                behavior:"smooth"
+
+            })
+scrollUp.style.display="block"
+            
+        })
+
+        scrollUp.addEventListener('click',()=>{
+            window.scrollBy({
+                top:-window.innerHeight,
+            behavior:"smooth"
+            })
+
+            scrollUp.style.display="none"
+        });
+    </script>
+</body>
+
+</html>
