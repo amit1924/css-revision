@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid</title>
+    <style>
+        :root {
+            font-size: 16px; /* Base font size */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            width: 100vw;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+            gap: 1rem;
+            width: 100%;
+            max-width: 1200px;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+        
+        .grid-item {
+            background-color: #000000;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 1.5rem;
+        }
+        
+        .item1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+         
+        img {
+            width: 100%; /* Set image width to 100% */
+            height: auto; /* Maintain aspect ratio */
+            max-width: 80%; /* Set max width for responsiveness */
+        }
+
+        /* Optional: Add styles to handle long text */
+       .img-container{
+        display: grid;
+       grid-template-columns: repeat(auto-fit,minmax(8rem,1fr));
+       gap: 2rem;
+       
+        
+       }
+       @media(max-width:400px){
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            gap: 1rem;
+            width: 100%;
+            max-width: 1200px;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+       }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grid-item item1">
+            <div class="img-container">
+                <img src="https://www.apple.com/v/apple-events/home/af/images/meta/overview__bcphzsdb4fpu_og.png?202407012123" alt="">
+                <img src="https://www.apple.com/v/apple-events/home/af/images/meta/overview__bcphzsdb4fpu_og.png?202407012123" alt="">
+            </div>
+            
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti a cumque perspiciatis earum, omnis tenetur quidem officia exercitationem similique nihil itaque laborum, accusamus reiciendis ab expedita laudantium. Neque, commodi nemo error<img src="https://www.apple.com/v/apple-events/home/af/images/meta/overview__bcphzsdb4fpu_og.png?202407012123" alt=""> nostrum dignissimos? Quidem aliquid quibusdam harum minima mollitia quia blanditiis. Tempora, et? Velit corrupti aperiam et, nesciunt fuga temporibus debitis repellendus dolore! Nihil ipsam possimus aperiam porro expedita delectus modi exercitationem totam ea at odit eius, odio voluptatum qui. Officia reiciendis facilis numquam eaque totam sed velit consectetur doloribus maiores inventore doloremque qui animi a explicabo omnis, saepe quod earum quos quia, tenetur placeat dolores. Ipsam, dolorum voluptas.</p>
+        </div>
+        <div class="grid-item">
+            <img src="https://www.apple.com/v/apple-events/home/af/images/meta/overview__bcphzsdb4fpu_og.png?202407012123" alt="">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti a cumque perspiciatis earum, omnis tenetur quidem officia exercitationem similique nihil itaque laborum, accusamus reiciendis ab expedita laudantium. Neque, commodi nemo error vero nostrum dignissimos? Quidem aliquid quibusdam harum minima mollitia quia blanditiis. Tempora, et? Velit corrupti aperiam et, nesciunt fuga temporibus debitis repellendus dolore! Nihil ipsam possimus aperiam porro expedita delectus modi exercitationem totam ea at odit eius, odio voluptatum qui. Officia reiciendis facilis numquam eaque totam sed velit consectetur doloribus maiores inventore doloremque qui animi a explicabo omnis, saepe quod earum quos quia, tenetur placeat dolores. Ipsam, dolorum voluptas.</p>
+        </div>
+        <div class="grid-item">
+            <img src="https://www.apple.com/v/apple-events/home/af/images/meta/overview__bcphzsdb4fpu_og.png?202407012123" alt="">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti a cumque perspiciatis earum, omnis tenetur quidem officia exercitationem similique nihil itaque laborum, accusamus reiciendis ab expedita laudantium. Neque, commodi nemo error vero nostrum dignissimos? Quidem aliquid quibusdam harum minima mollitia quia blanditiis. Tempora, et? Velit corrupti aperiam et, nesciunt fuga temporibus debitis repellendus dolore! Nihil ipsam possimus aperiam porro expedita delectus modi exercitationem totam ea at odit eius, odio voluptatum qui. Officia reiciendis facilis numquam eaque totam sed velit consectetur doloribus maiores inventore doloremque qui animi a explicabo omnis, saepe quod earum quos quia, tenetur placeat dolores. Ipsam, dolorum voluptas.</p>
+        </div>
+        <div class="grid-item">
+            <img src="https://www.apple.com/v/apple-events/home/af/images/meta/overview__bcphzsdb4fpu_og.png?202407012123" alt="">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti a cumque perspiciatis earum, omnis tenetur quidem officia exercitationem similique nihil itaque laborum, accusamus reiciendis ab expedita laudantium. Neque, commodi nemo error vero nostrum dignissimos? Quidem aliquid quibusdam harum minima mollitia quia blanditiis. Tempora, et? Velit corrupti aperiam et, nesciunt fuga temporibus debitis repellendus dolore! Nihil ipsam possimus aperiam porro expedita delectus modi exercitationem totam ea at odit eius, odio voluptatum qui. Officia reiciendis facilis numquam eaque totam sed velit consectetur doloribus maiores inventore doloremque qui animi a explicabo omnis, saepe quod earum quos quia, tenetur placeat dolores. Ipsam, dolorum voluptas.</p>
+        </div>
+        <div class="grid-item"> <img src="https://www.apple.com/v/apple-events/home/af/images/meta/overview__bcphzsdb4fpu_og.png?202407012123" alt="">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti a cumque perspiciatis earum, omnis tenetur quidem officia exercitationem similique nihil itaque laborum, accusamus reiciendis ab expedita laudantium. Neque, commodi nemo error vero nostrum dignissimos? Quidem aliquid quibusdam harum minima mollitia quia blanditiis. Tempora, et? Velit corrupti aperiam et, nesciunt fuga temporibus debitis repellendus dolore! Nihil ipsam possimus aperiam porro expedita delectus modi exercitationem totam ea at odit eius, odio voluptatum qui. Officia reiciendis facilis numquam eaque totam sed velit consectetur doloribus maiores inventore doloremque qui animi a explicabo omnis, saepe quod earum quos quia, tenetur placeat dolores. Ipsam, dolorum voluptas.</p></div>
+        <div class="grid-item"> <img src="https://www.apple.com/v/apple-events/home/af/images/meta/overview__bcphzsdb4fpu_og.png?202407012123" alt="">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti a cumque perspiciatis earum, omnis tenetur quidem officia exercitationem similique nihil itaque laborum, accusamus reiciendis ab expedita laudantium. Neque, commodi nemo error vero nostrum dignissimos? Quidem aliquid quibusdam harum minima mollitia quia blanditiis. Tempora, et? Velit corrupti aperiam et, nesciunt fuga temporibus debitis repellendus dolore! Nihil ipsam possimus aperiam porro expedita delectus modi exercitationem totam ea at odit eius, odio voluptatum qui. Officia reiciendis facilis numquam eaque totam sed velit consectetur doloribus maiores inventore doloremque qui animi a explicabo omnis, saepe quod earum quos quia, tenetur placeat dolores. Ipsam, dolorum voluptas.</p>
+        </div>
+    </div>
+</body>
+</html>
