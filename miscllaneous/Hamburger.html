@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Menu</title>
+    <style>
+        nav{
+            display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap:1rem;
+          padding: 1rem;
+          
+        }
+.link{
+    display: flex;
+    gap:0.8rem;
+    font-size: 1.5rem;
+    
+}
+        .link a{
+            text-decoration: none;
+        }
+        .link a:hover{
+            background-color: red;
+        }
+ .link-menu{
+    display: none;
+}
+
+.container{
+    position: relative;
+}
+
+.open-btn{
+    display: none;
+   position: absolute;
+   top: 0;
+   right: 0;
+}
+
+.close-btn{
+    display: none;
+   position: absolute;
+   top: 0;
+   right: 0;
+}
+
+
+        @media (max-width:550px){
+            nav{
+                display:none;
+                flex-direction: column;
+                background-color: rgb(24, 28, 20);
+                height: 100vh;
+                width: 45%;
+                justify-content: start;
+                gap: 1rem;
+            }
+.link{
+    display: flex;
+    flex-direction: column;
+   
+    
+    
+}
+
+.link a{
+    gap:1rem;
+    margin: 1rem;
+}
+
+.open-btn{
+    display: flex;
+    font-size: 1.5rem;
+}
+.close-btn{
+    display: none;
+}
+        }
+
+       
+       
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <nav class="menu">
+        <div class="logo">
+            <h1>My logo</h1>
+        </div>
+        <div class="link">
+            <a href="">Home</a><a href="">Projects</a><a href="">Contact</a><a href="">About</a>
+        </div>
+
+        
+
+    </nav>
+
+    <button class="open-btn">≡</button>
+    <button class="close-btn">❌</button>
+
+</div>
+
+
+
+
+
+    <script>
+        
+      const nav =document.querySelector("nav")
+      const closeButton =document.querySelector(".close-btn")
+const openButton =document.querySelector('.open-btn');
+
+
+openButton .addEventListener('click',()=>{
+    nav.style.display = "flex";
+    closeButton.style.display = "block";
+    openButton.style.display = "none";
+     
+
+    
+   
+})
+
+closeButton .addEventListener('click',()=>{
+    nav.style.display = "none";
+            openButton.style.display = "block";
+            closeButton.style.display = "none";
+});
+
+
+// Handle screen resize
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 550) {
+        nav.style.display = "flex"; // Always show the nav on larger screens
+        openButton.style.display = "none"; // Hide the open button
+        closeButton.style.display = "none"; // Hide the close button
+    } else {
+        nav.style.display = "none"; // Hide the nav on smaller screens by default
+        openButton.style.display = "flex"; // Show the open button on smaller screens
+    }
+});
+
+    </script>
+</body>
+</html>

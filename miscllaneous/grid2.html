@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid 2</title>
+    <style>
+        .container {
+            background-color: rgb(28, 52, 108);
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .item {
+            background-color: red;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* These items will automatically adjust their size based on the screen size */
+        .navbar {
+            grid-column: span 3;
+        }
+
+        .sidebar {
+            grid-column: span 1;
+        }
+
+        .content1 {
+            grid-column: span 2;
+        }
+
+        .content2 {
+            grid-column: span 1;
+        }
+
+        .content3 {
+            grid-column: span 1;
+        }
+
+        .footer {
+            grid-column: span 3;
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 900px) {
+            .navbar, .footer {
+                grid-column: span 2;
+            }
+
+            .content1, .content2, .content3 {
+                grid-column: span 2;
+            }
+
+            .sidebar {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .navbar, .sidebar, .content1, .content2, .content3, .footer {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item navbar">Navbar</div>
+        <div class="item sidebar">Sidebar</div>
+        <div class="item content1">Content 1</div>
+        <div class="item content2">Content 2</div>
+        <div class="item content3">Content 3</div>
+        <div class="item footer">Footer</div>
+    </div>
+</body>
+</html>

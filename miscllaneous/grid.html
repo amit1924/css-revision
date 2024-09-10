@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+min-height: 100vh;
+background-color: blueviolet;
+display: grid;
+grid-template-columns: repeat(3,1fr);
+border: 2px solid black;
+gap: 1rem;
+
+text-align: center;
+grid-template-areas: 
+"navbar navbar navbar"
+"sidebar sidebar content"
+"footer footer footer";
+;
+        }
+
+.item{
+    background-color: red;
+    
+    align-content: center;
+}
+
+.navbar{
+    grid-area: navbar;
+}
+.sidebar{
+    grid-area: sidebar;
+   
+}
+
+.content1{
+    grid-area:content1
+    
+}
+.content2{
+    grid-area:content2;
+    max-width: 200px;
+    
+}
+.content3{
+    grid-area:content3;
+    max-width: 200px;
+}
+
+.footer{
+    grid-area:footer
+}
+        
+.content {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: aquamarine;
+    height: 100%; 
+   
+  
+}
+
+.contents{
+    display: flex;
+    justify-content: space-between;
+    gap:2rem;
+   
+    
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item navbar">Navbar</div>
+        <div class="item sidebar">Sidebar</div>
+        <div class="content">
+        <div class="item content1">Content1
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis hic dignissimos blanditiis molestiae dolores similique voluptates quisquam excepturi sint dolorum delectus deserunt consectetur temporibus facilis eveniet aperiam, vero neque autem omnis quos! Distinctio, corporis quis pariatur dolores dicta est labore, iure sequi porro temporibus expedita vitae dignissimos beatae, quam velit perferendis ipsa consequuntur dolorem iusto in ratione incidunt. Iusto vero obcaecati, dolorem quo id aliquam, esse assumenda praesentium veniam, est consequuntur corporis accusantium fugiat voluptates eum! Quo esse, laborum corrupti totam quis quasi tempore accusantium velit aliquid incidunt pariatur maxime aliquam similique magnam voluptas, nesciunt vero, nostrum nobis. Nam, quasi..</p>
+        </div>
+        <div class="contents">
+        <div class="item content2">Content2
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui numquam mollitia rerum ipsum impedit quaerat ducimus doloribus tempora deserunt voluptatibus.</p>
+        </div>
+        <div class="item content3">Content3
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui numquam mollitia rerum ipsum impedit quaerat ducimus doloribus tempora deserunt voluptatibus.</p>
+        </div>
+    </div>
+    </div>
+        <div class="item footer">Footer</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid 1</title>
+    <style>
+        .container {
+            background-color: rgb(28, 52, 108);
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-areas:
+                "navbar navbar navbar navbar"
+                "sidebar content1 content1 content1"
+                "sidebar content2 content3 content3"
+                "footer footer footer footer";
+            gap: 1rem;
+        }
+
+        .item {
+            background-color: red;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .navbar {
+            grid-area: navbar;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+        }
+
+        .content1 {
+            grid-area: content1;
+        }
+
+        .content2 {
+            grid-area: content2;
+        }
+
+        .content3 {
+            grid-area: content3;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item navbar">Navbar</div>
+        <div class="item sidebar">Sidebar</div>
+        <div class="item content1">Content 1</div>
+        <div class="item content2">Content 2</div>
+        <div class="item content3">Content 3</div>
+        <div class="item footer">Footer</div>
+    </div>
+</body>
+</html>
